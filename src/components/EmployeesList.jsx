@@ -37,7 +37,7 @@ class EmployeesList extends Component {
                 <td>{emp.firstName}</td>
                 <td>{emp.lastName}</td>
                 <td>{emp.email}</td>
-                <td>{}</td>
+                <td>{emp.password}</td>
               </tr>
             ))}
           </tbody>
