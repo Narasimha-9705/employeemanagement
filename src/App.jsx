@@ -1,14 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import EmployeesList from './components/EmployeesList'
 import { Empheader } from './components/Header/Empheader'
 import Footer from './components/Footer/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import EditEmployee from './components/Employee/EditEmployee'
+import AddEmployee from './components/Employee/AddEmployee'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
@@ -18,8 +19,10 @@ function App() {
       <Empheader />
       <div style={{ paddingBottom: "60px" }}>
         <Routes>
-        
+          <Route path="/" element={<EmployeesList/>}/>
           <Route path="/employees" element={<EmployeesList />} />
+          <Route path="/add" element={<AddEmployee />} />
+           <Route path="/edit/:id" element={<EditEmployee />} />  
           
         </Routes>
       </div>
